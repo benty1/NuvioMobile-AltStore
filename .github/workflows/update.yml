@@ -2,8 +2,8 @@ name: Auto-Update Nuvio IPA
 
 on:
   schedule:
-    - cron: '0 */6 * * *' # Checks GitHub every 6 hours
-  workflow_dispatch: # Allows you to manually trigger it anytime from the Actions tab
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
 
 jobs:
   update:
@@ -81,7 +81,9 @@ jobs:
           '
 
       - name: Commit and push if repo.json changed
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Auto-update Nuvio IPA version from GitHub Releases"
-          file_pattern: repo.json
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add repo.json
+          git diff --staged --quiet || git commit -m "Auto-update Nuvio IPA version from GitHub Releases"
+          git push
