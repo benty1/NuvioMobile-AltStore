@@ -5,7 +5,6 @@
   "description": "Automatically updated repository tracking official Nuvio mobile releases.",
   "iconURL": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/main/icon.png",
   "website": "https://nuvio.tv",
-  "headerURL": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/main/banner.png",
   "apps": [
     {
       "name": "Nuvio",
@@ -15,16 +14,7 @@
       "localizedDescription": "Official Nuvio streaming application for iOS.",
       "iconURL": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/main/icon.png",
       "tintColor": "FF5733",
-      "versions": [
-        {
-          "version": "0.4.11",
-          "date": "2026-08-26",
-          "localizedDescription": "## What's Changed\r\n\r\n- 04ca1226 feat(details): add tappable expandable descriptions @tapframe\r\n- [fix: Simkl anime type classification and landscape poster aspect ratio (#1786)](https://github.com/Nuv...",
-          "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.11/nuvio-0.4.11-full-release.ipa",
-          "size": 51638510,
-          "minOSVersion": "15.0"
-        }
-      ]
+      "versions": []
     }
   ]
 }
