@@ -1,0 +1,21 @@
+{
+  "name": "Nuvio Full (Unofficial)",
+  "identifier": "com.benty1.altstoresource",
+  "subtitle": "Official IPA, Unofficial Repo",
+  "description": "Automatically updated repository tracking official Nuvio mobile releases.",
+  "iconURL": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/main/icon.png",
+  "website": "https://nuvio.tv",
+  "headerURL": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/main/banner.png",
+  "apps": [
+    {
+      "name": "Nuvio",
+      "bundleIdentifier": "app.nuvio.mobile",
+      "developerName": "NuvioMedia",
+      "subtitle": "Streaming client",
+      "localizedDescription": "Official Nuvio streaming application for iOS.",
+      "iconURL": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/main/icon.png",
+      "tintColor": "FF5733",
+      "versions": []
+    }
+  ]
+}
