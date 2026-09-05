@@ -1,12 +1,22 @@
-name: Auto-Update Nuvio IPA
+name: Update Nuvio Repository
 
 on:
-  schedule:
-    - cron: '0 */6 * * *'
+  repository_dispatch:
+    types: [nuvio_release_update]
   workflow_dispatch:
+    inputs:
+      variant:
+        description: 'App variant to check/update'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - official
+          - enhanced
 
 jobs:
-  update:
+  sync-repo:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -19,71 +29,16 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Fetch latest release and update repo.json
-        run: |
-          python3 -c '
-          import urllib.request
-          import json
-          import os
+      - name: Execute Sync Script
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WEBHOOK_VARIANT: ${{ github.event.client_payload.variant }}
+          MANUAL_VARIANT: ${{ inputs.variant }}
+        run: python3 update_repo.py
 
-          url = "https://api.github.com/repos/NuvioMedia/NuvioMobile/releases/latest"
-          req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-          
-          try:
-              with urllib.request.urlopen(req) as response:
-                  data = json.loads(response.read().decode())
-          except Exception as e:
-              print(f"Failed to fetch release: {e}")
-              exit(0)
-
-          tag = data["tag_name"]
-          version = tag.lstrip("v")
-          pub_date = data["published_at"].split("T")[0]
-          body = data.get("body", "Latest release.")
-
-          ipa_url = ""
-          ipa_size = 45000000
-          for asset in data.get("assets", []):
-              if asset["name"].endswith(".ipa"):
-                  ipa_url = asset["browser_download_url"]
-                  ipa_size = asset["size"]
-                  break
-
-          if not ipa_url:
-              print("No IPA found in latest release.")
-              exit(0)
-
-          json_path = "repo.json"
-          with open(json_path, "r") as f:
-              source_data = json.load(f)
-
-          app = next((item for item in source_data["apps"] if item["name"] == "Nuvio"), None)
-          if app:
-              versions = app["versions"]
-              existing_versions = [v["version"] for v in versions]
-              
-              if version not in existing_versions:
-                  new_version_entry = {
-                      "version": version,
-                      "date": pub_date,
-                      "localizedDescription": body[:200] + "...",
-                      "downloadURL": ipa_url,
-                      "size": ipa_size,
-                      "minOSVersion": "15.0"
-                  }
-                  versions.insert(0, new_version_entry)
-                  
-                  with open(json_path, "w") as f:
-                      json.dump(source_data, f, indent=2)
-                  print(f"Successfully added version {version}!")
-              else:
-                  print("Already on the latest version.")
-          '
-
-      - name: Commit and push if repo.json changed
+      - name: Commit and push if modified
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add repo.json
-          git diff --staged --quiet || git commit -m "Auto-update Nuvio IPA version from GitHub Releases"
-          git push
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update: Sync Nuvio and Enhanced repo versions" && git push)
