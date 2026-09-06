@@ -1,0 +1,17 @@
+[
+  {
+    "key": "official",
+    "api": "https://api.github.com/repos/NuvioMedia/NuvioMobile/releases/latest",
+    "bundle_id": "com.nuvio.media"
+  },
+  {
+    "key": "enhanced",
+    "api": "https://api.github.com/repos/luqmanfadlli/NuvioMobile-Enhanced/releases/latest",
+    "bundle_id": "com.nuvio.enhanced"
+  },
+  {
+    "key": "scenebox",
+    "api": "https://api.github.com/repos/donbytyqi/scenebox/releases/latest",
+    "bundle_id": "com.donbytyqi.scenebox"
+  }
+]
