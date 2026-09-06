@@ -44,14 +44,6 @@
           "downloadURL": "https://github.com/yesnt10/NuvioMobile-Enhanced/releases/download/enhanced-v0.4.13-build117/nuvio-0.4.13-full-release.ipa",
           "size": 67231486,
           "minOSVersion": "15.0"
-        },
-        {
-          "version": "0.4.14",
-          "date": "2026-09-05",
-          "localizedDescription": "## Upstream changelog:\r\n- fix(player): original audio language preference @tapframe\r\n- fix(player): allow minimum device brightness @tapframe\r\n- use Android User-Agent so IPTV DASH streams do not 403 ...",
-          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.4.14/Nuvio-v0.4.14-Enhanced.ipa",
-          "size": 66761280,
-          "minOSVersion": "15.0"
         }
       ]
     },
