@@ -8,7 +8,7 @@ def main():
     webhook_variant = os.environ.get("WEBHOOK_VARIANT")
     manual_variant = os.environ.get("MANUAL_VARIANT")
 
-    # Determine which target(s) to process based on webhook payload or manual choice
+    # Determine execution mode
     target_choice = webhook_variant if webhook_variant else (manual_variant if manual_variant else "all")
     print(f"[*] Execution target mode: {target_choice}")
 
@@ -16,25 +16,22 @@ def main():
     if token:
         headers["Authorization"] = f"Bearer {token}"
 
-    all_targets = [
-        {
-            "key": "official",
-            "api": "https://api.github.com/repos/NuvioMedia/NuvioMobile/releases/latest",
-            "match_key": "Nuvio",
-            "default_name": "Nuvio",
-            "bundle_id": "com.nuviomedia.nuviomobile"
-        },
-        {
-            "key": "enhanced",
-            "api": "https://api.github.com/repos/luqmanfadlli/NuvioMobile-Enhanced/releases/latest",
-            "match_key": "Nuvio Enhanced",
-            "default_name": "Nuvio Enhanced",
-            "bundle_id": "com.nuviomedia.nuviomobile.enhanced"
-        }
-    ]
+    # Load dynamic sources configuration
+    sources_path = "sources.json"
+    if not os.path.exists(sources_path):
+        print(f"[!] Error: {sources_path} not found in repository root.")
+        exit(1)
+
+    try:
+        with open(sources_path, "r", encoding="utf-8") as f:
+            all_targets = json.load(f)
+    except json.JSONDecodeError as e:
+        print(f"[!] Error parsing {sources_path}: {e}")
+        exit(1)
 
     # Filter targets depending on execution mode
-    if target_choice in ["official", "enhanced"]:
+    valid_keys = [t["key"] for t in all_targets]
+    if target_choice in valid_keys:
         targets = [t for t in all_targets if t["key"] == target_choice]
     else:
         targets = all_targets
@@ -92,14 +89,14 @@ def main():
             print(f"[!] No .ipa asset found in the latest release for {target['default_name']}.")
             continue
 
-        # Find or initialize app entry in repo.json
+        # Find app entry by match_key
         app = next((item for item in source_data["apps"] if target["match_key"] in item["name"]), None)
 
         if not app:
             app = {
                 "name": target["default_name"],
                 "bundleIdentifier": target["bundle_id"],
-                "developerName": "Nuvio Team",
+                "developerName": target.get("developerName", "Unknown Team"),
                 "subtitle": f"Official release ({target['default_name']})",
                 "localizedDescription": f"Automatically synced release for {target['default_name']}.",
                 "iconURL": "",
@@ -107,8 +104,9 @@ def main():
             }
             source_data["apps"].append(app)
 
-        # Enforce distinct naming so enhanced and official don't collide
+        # Enforce distinct naming and correct unique bundle ID mapping in repo.json
         app["name"] = target["default_name"]
+        app["bundleIdentifier"] = target["bundle_id"]
 
         versions = app.setdefault("versions", [])
         existing_versions = [v.get("version") for v in versions]
