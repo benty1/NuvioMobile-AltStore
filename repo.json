@@ -1,44 +1,26 @@
 {
-  "name": "Nuvio Full (Unofficial)",
+  "name": "Nuvio Enhanced (Unofficial)",
   "identifier": "com.benty1.altstoresource",
   "subtitle": "Official IPA, Unofficial Repo",
-  "description": "Automatically updated repository tracking official Nuvio mobile and TV releases.",
-  "iconURL": "https://raw.githubusercontent.com/luqmanfadlli/NuvioMobile-iOS/main/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
+  "description": "Automatically updated repository tracking mobile and TV releases.",
+  "iconURL": "https://raw.githubusercontent.com/yesnt10/NuvioMobile-Enhanced/refs/heads/enhanced/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
   "header": {
-    "icon": "https://raw.githubusercontent.com/luqmanfadlli/NuvioMobile-iOS/main/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
-    "banner": "https://raw.githubusercontent.com/luqmanfadlli/NuvioMobile-iOS/main/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
+    "icon": "https://raw.githubusercontent.com/yesnt10/NuvioMobile-Enhanced/refs/heads/enhanced/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
+    "banner": "https://raw.githubusercontent.com/yesnt10/NuvioMobile-Enhanced/refs/heads/enhanced/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
     "tintColor": "FF5733"
   },
   "website": "https://nuvio.tv",
   "apps": [
     {
-      "name": "Nuvio",
-      "bundleIdentifier": "com.nuviomedia.nuviomobile",
-      "developerName": "Nuvio Team",
-      "subtitle": "Official release (Nuvio)",
-      "localizedDescription": "Automatically synced release for Nuvio.",
-      "iconURL": "",
-      "versions": [
-        {
-          "version": "0.4.14",
-          "date": "2026-09-05",
-          "localizedDescription": "fix(player): original audio language preference and minimum device brightness.",
-          "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.14/nuvio-0.4.14-full-release.ipa",
-          "size": 51787331,
-          "minOSVersion": "15.0"
-        }
-      ]
-    },
-    {
       "name": "Nuvio Enhanced",
-      "bundleIdentifier": "com.nuviomedia.nuviomobile.enhanced",
-      "developerName": "Nuvio Team",
+      "bundleIdentifier": "com.nuvio.enhanced",
+      "developerName": "yesnt10",
       "subtitle": "Official release (Nuvio Enhanced)",
       "localizedDescription": "Automatically synced release for Nuvio Enhanced.",
-      "iconURL": "",
+      "iconURL": "https://raw.githubusercontent.com/yesnt10/NuvioMobile-Enhanced/refs/heads/enhanced/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
       "versions": [
         {
-          "version": "0.4.13",
+          "version": "0.4.13 (build 117)",
           "date": "2026-09-02",
           "localizedDescription": "Integrated upstream NuvioMobile changes and added Telegram account integration.",
           "downloadURL": "https://github.com/yesnt10/NuvioMobile-Enhanced/releases/download/enhanced-v0.4.13-build117/nuvio-0.4.13-full-release.ipa",
