@@ -55,6 +55,60 @@
           "minOSVersion": "15.0"
         }
       ]
+    },
+    {
+      "name": "Nuvio",
+      "bundleIdentifier": "com.nuvio.media",
+      "developerName": "Nuvio Team",
+      "subtitle": "Official release (Nuvio)",
+      "localizedDescription": "Automatically synced release for Nuvio.",
+      "iconURL": "",
+      "versions": [
+        {
+          "version": "0.4.14",
+          "date": "2026-09-05",
+          "localizedDescription": "- 4f79bfe0 fix(player): original audio language preference @tapframe  \r\n- 9b09045f fix(player): allow minimum device brightness @tapframe  \r\n- [use Android User-Agent so IPTV DASH streams do not 403 (...",
+          "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.14/nuvio-0.4.14-full-release.ipa",
+          "size": 51787331,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "Nuvio Enhanced",
+      "bundleIdentifier": "com.nuvio.enhanced",
+      "developerName": "yesnt10",
+      "subtitle": "Official release (Nuvio Enhanced)",
+      "localizedDescription": "Automatically synced release for Nuvio Enhanced.",
+      "iconURL": "",
+      "versions": [
+        {
+          "version": "0.4.14",
+          "date": "2026-09-05",
+          "localizedDescription": "## Upstream changelog:\r\n- fix(player): original audio language preference @tapframe\r\n- fix(player): allow minimum device brightness @tapframe\r\n- use Android User-Agent so IPTV DASH streams do not 403 ...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.4.14/Nuvio-v0.4.14-Enhanced.ipa",
+          "size": 66761280,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "Scenebox",
+      "bundleIdentifier": "com.donbytyqi.scenebox",
+      "developerName": "Scenebox Team",
+      "subtitle": "Official release (Scenebox)",
+      "localizedDescription": "Automatically synced release for Scenebox.",
+      "iconURL": "",
+      "versions": [
+        {
+          "version": "1.0.2",
+          "date": "2026-08-22",
+          "localizedDescription": "Mostly stuff you asked for.\n\n- You don't need an account anymore. There's a \"Continue as guest\" button on the login screen. Everything you watch is saved on the device, and if you make an account late...",
+          "downloadURL": "https://github.com/donbytyqi/scenebox/releases/download/v1.0.2/SceneBox-1.0.2-tvOS.ipa",
+          "size": 29544735,
+          "minOSVersion": "15.0"
+        }
+      ]
     }
   ]
 }
