@@ -38,6 +38,14 @@
       "iconURL": "",
       "versions": [
         {
+          "version": "0.4.13 (build 117)",
+          "date": "2026-09-02",
+          "localizedDescription": "## NuvioMobile Enhanced 0.4.13 (117)\n\nIntegrated upstream NuvioMobile changes through `0.4.13` into the Enhanced fork.\n\n### Added\n\n- Added Telegram account integration to the full iOS build using TDLi...",
+          "downloadURL": "https://github.com/yesnt10/NuvioMobile-Enhanced/releases/download/enhanced-v0.4.13-build117/nuvio-0.4.13-full-release.ipa",
+          "size": 67231486,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "enhanced-v0.4.13-build117",
           "date": "2026-09-02",
           "localizedDescription": "## NuvioMobile Enhanced 0.4.13 (117)\n\nIntegrated upstream NuvioMobile changes through `0.4.13` into the Enhanced fork.\n\n### Added\n\n- Added Telegram account integration to the full iOS build using TDLi...",
