@@ -2,16 +2,22 @@
   {
     "key": "official",
     "api": "https://api.github.com/repos/NuvioMedia/NuvioMobile/releases/latest",
-    "bundle_id": "com.nuvio.media"
+    "bundle_id": "com.nuvio.media",
+    "default_name": "Nuvio",
+    "developerName": "Nuvio Team"
   },
   {
     "key": "enhanced",
     "api": "https://api.github.com/repos/luqmanfadlli/NuvioMobile-Enhanced/releases/latest",
-    "bundle_id": "com.nuvio.enhanced"
+    "bundle_id": "com.nuvio.enhanced",
+    "default_name": "Nuvio Enhanced",
+    "developerName": "yesnt10"
   },
   {
     "key": "scenebox",
     "api": "https://api.github.com/repos/donbytyqi/scenebox/releases/latest",
-    "bundle_id": "com.donbytyqi.scenebox"
+    "bundle_id": "com.donbytyqi.scenebox",
+    "default_name": "Scenebox",
+    "developerName": "Scenebox Team"
   }
 ]
