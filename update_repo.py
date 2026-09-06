@@ -2,6 +2,24 @@ import os
 import json
 import urllib.request
 import urllib.error
+import re
+
+def clean_version(tag):
+    if not tag:
+        return "1.0.0"
+    
+    # Look for a standard semantic version pattern (e.g., 0.4.13)
+    match = re.search(r'(\d+\.\d+\.\d+)', tag)
+    if match:
+        base_ver = match.group(1)
+        # Check if there's an attached build number (e.g., build117)
+        build_match = re.search(r'(?:build|-)(\d+)', tag, re.IGNORECASE)
+        if build_match:
+            return f"{base_ver} (build {build_match.group(1)})"
+        return base_ver
+        
+    # Fallback: just strip leading 'v' or text prefixes if no semver found
+    return re.sub(r'^[a-zA-Z_-]+v?', '', tag)
 
 def main():
     token = os.environ.get("GH_TOKEN")
@@ -66,11 +84,10 @@ def main():
             print(f"[!] No tag_name found for {target['default_name']}.")
             continue
 
-        version = tag.lstrip("v")
+        version = clean_version(tag)
         pub_date = data.get("published_at", "").split("T")[0]
         body = data.get("body", "No release notes provided.")
 
-        # Locate the .ipa asset safely among the APKs and other files
         ipa_url = ""
         ipa_size = 0
         for asset in data.get("assets", []):
@@ -86,7 +103,6 @@ def main():
 
         target_bundle_id = target["bundle_id"]
 
-        # STRICT MATCHING: Find app entry exclusively by its unique bundle identifier
         app = next((item for item in source_data["apps"] if item.get("bundleIdentifier") == target_bundle_id), None)
 
         if not app:
@@ -101,7 +117,6 @@ def main():
             }
             source_data["apps"].append(app)
 
-        # Ensure correct mapping
         app["name"] = target["default_name"]
         app["bundleIdentifier"] = target_bundle_id
 
