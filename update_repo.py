@@ -8,7 +8,6 @@ def main():
     webhook_variant = os.environ.get("WEBHOOK_VARIANT")
     manual_variant = os.environ.get("MANUAL_VARIANT")
 
-    # Determine execution mode
     target_choice = webhook_variant if webhook_variant else (manual_variant if manual_variant else "all")
     print(f"[*] Execution target mode: {target_choice}")
 
@@ -16,7 +15,6 @@ def main():
     if token:
         headers["Authorization"] = f"Bearer {token}"
 
-    # Load dynamic sources configuration
     sources_path = "sources.json"
     if not os.path.exists(sources_path):
         print(f"[!] Error: {sources_path} not found in repository root.")
@@ -29,12 +27,8 @@ def main():
         print(f"[!] Error parsing {sources_path}: {e}")
         exit(1)
 
-    # Filter targets depending on execution mode
     valid_keys = [t["key"] for t in all_targets]
-    if target_choice in valid_keys:
-        targets = [t for t in all_targets if t["key"] == target_choice]
-    else:
-        targets = all_targets
+    targets = [t for t in all_targets if t["key"] == target_choice] if target_choice in valid_keys else all_targets
 
     json_path = "repo.json"
     if not os.path.exists(json_path):
@@ -54,7 +48,7 @@ def main():
     updated = False
 
     for target in targets:
-        print(f"[*] Fetching latest release for {target['default_name']}...")
+        print(f"[*] Fetching latest release info for {target['default_name']}...")
         req = urllib.request.Request(target["api"], headers=headers)
         
         try:
@@ -76,11 +70,12 @@ def main():
         pub_date = data.get("published_at", "").split("T")[0]
         body = data.get("body", "No release notes provided.")
 
-        # Locate the .ipa asset
+        # Locate the .ipa asset safely among the APKs and other files
         ipa_url = ""
         ipa_size = 0
         for asset in data.get("assets", []):
-            if asset.get("name", "").endswith(".ipa"):
+            asset_name = asset.get("name", "")
+            if asset_name.endswith(".ipa"):
                 ipa_url = asset.get("browser_download_url")
                 ipa_size = asset.get("size", 50000000)
                 break
@@ -89,13 +84,15 @@ def main():
             print(f"[!] No .ipa asset found in the latest release for {target['default_name']}.")
             continue
 
-        # Find app entry by match_key
-        app = next((item for item in source_data["apps"] if target["match_key"] in item["name"]), None)
+        target_bundle_id = target["bundle_id"]
+
+        # STRICT MATCHING: Find app entry exclusively by its unique bundle identifier
+        app = next((item for item in source_data["apps"] if item.get("bundleIdentifier") == target_bundle_id), None)
 
         if not app:
             app = {
                 "name": target["default_name"],
-                "bundleIdentifier": target["bundle_id"],
+                "bundleIdentifier": target_bundle_id,
                 "developerName": target.get("developerName", "Unknown Team"),
                 "subtitle": f"Official release ({target['default_name']})",
                 "localizedDescription": f"Automatically synced release for {target['default_name']}.",
@@ -104,9 +101,9 @@ def main():
             }
             source_data["apps"].append(app)
 
-        # Enforce distinct naming and correct unique bundle ID mapping in repo.json
+        # Ensure correct mapping
         app["name"] = target["default_name"]
-        app["bundleIdentifier"] = target["bundle_id"]
+        app["bundleIdentifier"] = target_bundle_id
 
         versions = app.setdefault("versions", [])
         existing_versions = [v.get("version") for v in versions]
