@@ -1,23 +1,20 @@
 [
   {
-    "key": "official",
-    "api": "https://api.github.com/repos/NuvioMedia/NuvioMobile/releases/latest",
-    "bundle_id": "com.nuvio.media",
-    "default_name": "Nuvio",
-    "developerName": "Nuvio Team"
-  },
-  {
     "key": "enhanced",
-    "api": "https://api.github.com/repos/yesnt10/NuvioMobile-Enhanced/releases/latest",
-    "bundle_id": "com.nuvio.enhanced",
+    "api": "https://api.github.com/repos/luqmanfadlli/NuvioMobile-Enhanced/releases/latest",
+    "match_key": "Nuvio Enhanced",
     "default_name": "Nuvio Enhanced",
-    "developerName": "yest10"
+    "bundle_id": "com.nuviomedia.nuviomobile.enhanced",
+    "developerName": "yesnt10",
+    "iconURL": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/0.4.11/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png"
   },
   {
     "key": "scenebox",
     "api": "https://api.github.com/repos/donbytyqi/scenebox/releases/latest",
-    "bundle_id": "com.donbytyqi.scenebox",
+    "match_key": "Scenebox",
     "default_name": "Scenebox",
-    "developerName": "Scenebox Team"
+    "bundle_id": "com.donbytyqi.scenebox",
+    "developerName": "Scenebox Team",
+    "iconURL": ""
   }
 ]
