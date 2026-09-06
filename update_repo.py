@@ -102,6 +102,7 @@ def main():
             continue
 
         target_bundle_id = target["bundle_id"]
+        icon_url = target.get("iconURL", "")
 
         app = next((item for item in source_data["apps"] if item.get("bundleIdentifier") == target_bundle_id), None)
 
@@ -112,13 +113,14 @@ def main():
                 "developerName": target.get("developerName", "Unknown Team"),
                 "subtitle": f"Official release ({target['default_name']})",
                 "localizedDescription": f"Automatically synced release for {target['default_name']}.",
-                "iconURL": "",
+                "iconURL": icon_url,
                 "versions": []
             }
             source_data["apps"].append(app)
 
         app["name"] = target["default_name"]
         app["bundleIdentifier"] = target_bundle_id
+        app["iconURL"] = icon_url
 
         versions = app.setdefault("versions", [])
         existing_versions = [v.get("version") for v in versions]
