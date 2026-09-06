@@ -22,7 +22,7 @@
         {
           "version": "0.4.14",
           "date": "2026-09-05",
-          "localizedDescription": "- 4f79bfe0 fix(player): original audio language preference @tapframe  \r\n- 9b09045f fix(player): allow minimum device brightness @tapframe  \r\n- [use Android User-Agent so IPTV DASH streams do not 403 (...",
+          "localizedDescription": "fix(player): original audio language preference and minimum device brightness.",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.14/nuvio-0.4.14-full-release.ipa",
           "size": 51787331,
           "minOSVersion": "15.0"
@@ -38,17 +38,9 @@
       "iconURL": "",
       "versions": [
         {
-          "version": "0.4.13 (build 117)",
+          "version": "0.4.13",
           "date": "2026-09-02",
-          "localizedDescription": "## NuvioMobile Enhanced 0.4.13 (117)\n\nIntegrated upstream NuvioMobile changes through `0.4.13` into the Enhanced fork.\n\n### Added\n\n- Added Telegram account integration to the full iOS build using TDLi...",
-          "downloadURL": "https://github.com/yesnt10/NuvioMobile-Enhanced/releases/download/enhanced-v0.4.13-build117/nuvio-0.4.13-full-release.ipa",
-          "size": 67231486,
-          "minOSVersion": "15.0"
-        },
-        {
-          "version": "enhanced-v0.4.13-build117",
-          "date": "2026-09-02",
-          "localizedDescription": "## NuvioMobile Enhanced 0.4.13 (117)\n\nIntegrated upstream NuvioMobile changes through `0.4.13` into the Enhanced fork.\n\n### Added\n\n- Added Telegram account integration to the full iOS build using TDLi...",
+          "localizedDescription": "Integrated upstream NuvioMobile changes and added Telegram account integration.",
           "downloadURL": "https://github.com/yesnt10/NuvioMobile-Enhanced/releases/download/enhanced-v0.4.13-build117/nuvio-0.4.13-full-release.ipa",
           "size": 67231486,
           "minOSVersion": "15.0"
@@ -66,7 +58,7 @@
         {
           "version": "1.0.2",
           "date": "2026-08-22",
-          "localizedDescription": "Mostly stuff you asked for.\n\n- You don't need an account anymore. There's a \"Continue as guest\" button on the login screen. Everything you watch is saved on the device, and if you make an account late...",
+          "localizedDescription": "Guest login mode added; watchlist is saved locally on device.",
           "downloadURL": "https://github.com/donbytyqi/scenebox/releases/download/v1.0.2/SceneBox-1.0.2-tvOS.ipa",
           "size": 29544735,
           "minOSVersion": "15.0"
