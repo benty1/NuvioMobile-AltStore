@@ -2,7 +2,7 @@
   "name": "Nuvio Full (Unofficial)",
   "identifier": "com.benty1.altstoresource",
   "subtitle": "Official IPA, Unofficial Repo",
-  "description": "Automatically updated repository tracking official Nuvio mobile releases.",
+  "description": "Automatically updated repository tracking official Nuvio mobile and TV releases.",
   "iconURL": "https://raw.githubusercontent.com/luqmanfadlli/NuvioMobile-iOS/main/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
   "header": {
     "icon": "https://raw.githubusercontent.com/luqmanfadlli/NuvioMobile-iOS/main/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
@@ -13,7 +13,7 @@
   "apps": [
     {
       "name": "Nuvio",
-      "bundleIdentifier": "com.nuvio.media",
+      "bundleIdentifier": "com.nuviomedia.nuviomobile",
       "developerName": "Nuvio Team",
       "subtitle": "Official release (Nuvio)",
       "localizedDescription": "Automatically synced release for Nuvio.",
@@ -31,8 +31,8 @@
     },
     {
       "name": "Nuvio Enhanced",
-      "bundleIdentifier": "com.nuvio.enhanced",
-      "developerName": "yesnt10",
+      "bundleIdentifier": "com.nuviomedia.nuviomobile.enhanced",
+      "developerName": "Nuvio Team",
       "subtitle": "Official release (Nuvio Enhanced)",
       "localizedDescription": "Automatically synced release for Nuvio Enhanced.",
       "iconURL": "",
