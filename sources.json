@@ -8,10 +8,10 @@
   },
   {
     "key": "enhanced",
-    "api": "https://api.github.com/repos/luqmanfadlli/NuvioMobile-Enhanced/releases/latest",
+    "api": "https://api.github.com/repos/yesnt10/NuvioMobile-Enhanced/releases/latest",
     "bundle_id": "com.nuvio.enhanced",
     "default_name": "Nuvio Enhanced",
-    "developerName": "yesnt10"
+    "developerName": "yest10"
   },
   {
     "key": "scenebox",
