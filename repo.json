@@ -35,7 +35,7 @@
       "developerName": "Scenebox Team",
       "subtitle": "Official release (Scenebox)",
       "localizedDescription": "Automatically synced release for Scenebox.",
-      "iconURL": "",
+      "iconURL": "https://raw.githubusercontent.com/donbytyqi/scenebox/refs/heads/main/WatchBox/Assets.xcassets/AppIcon.appiconset/appicon.png",
       "versions": [
         {
           "version": "1.0.2",
