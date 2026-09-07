@@ -1,6 +1,6 @@
 [
   {
-    "key": "enhanced",
+    "key": "enhanced-yesnt10",
     "api": "https://api.github.com/repos/yesnt10/NuvioMobile-Enhanced/releases/latest",
     "match_key": "Nuvio Enhanced",
     "default_name": "Nuvio Enhanced",
@@ -9,11 +9,20 @@
     "iconURL": "https://raw.githubusercontent.com/yesnt10/NuvioMobile-Enhanced/refs/heads/enhanced/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png"
   },
   {
+    "key": "enhanced-akrusso",
+    "api": "https://api.github.com/repos/AKRusso/NuvioMobile-Enhanced/releases/latest",
+    "match_key": "Nuvio Enhanced",
+    "default_name": "Nuvio Enhanced",
+    "bundle_id": "com.nuvio.enhanced",
+    "developerName": "AKRusso",
+    "iconURL": "https://raw.githubusercontent.com/yesnt10/NuvioMobile-Enhanced/refs/heads/enhanced/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png"
+  },
+  {
     "key": "scenebox",
     "api": "https://api.github.com/repos/donbytyqi/scenebox/releases/latest",
     "match_key": "Scenebox",
     "default_name": "Scenebox",
-    "bundle_id": "com.donbytyqi.scenebox",
+    "bundle_id": "com.donbytyqi.donbytyqi",
     "developerName": "Scenebox Team",
     "iconURL": "https://raw.githubusercontent.com/donbytyqi/scenebox/refs/heads/main/WatchBox/Assets.xcassets/AppIcon.appiconset/appicon.png"
   }
