@@ -2,14 +2,14 @@ name: Update AltStore Repo
 
 on:
   schedule:
-    - cron: '*/5 * * * *' # Runs every 5 minutes (maximum frequency)
-  workflow_dispatch: # Allows manual triggers from the Actions tab
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
 
 jobs:
   update-repo:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Required to commit and push updated repo.json
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
