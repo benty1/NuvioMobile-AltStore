@@ -46,6 +46,24 @@
           "minOSVersion": "15.0"
         }
       ]
+    },
+    {
+      "name": "Scenebox",
+      "bundleIdentifier": "com.donbytyqi.donbytyqi",
+      "developerName": "Scenebox Team",
+      "subtitle": "Official release (Scenebox)",
+      "localizedDescription": "Automatically synced release for Scenebox.",
+      "iconURL": "https://raw.githubusercontent.com/donbytyqi/scenebox/refs/heads/main/WatchBox/Assets.xcassets/AppIcon.appiconset/appicon.png",
+      "versions": [
+        {
+          "version": "1.0.2",
+          "date": "2026-08-22",
+          "localizedDescription": "Mostly stuff you asked for.\n\n- You don't need an account anymore. There's a \"Continue as guest\" button on the login screen. Everything you watch is saved on the device, and if you make an account late...",
+          "downloadURL": "https://github.com/donbytyqi/scenebox/releases/download/v1.0.2/SceneBox-1.0.2-tvOS.ipa",
+          "size": 29544735,
+          "minOSVersion": "15.0"
+        }
+      ]
     }
   ]
 }
