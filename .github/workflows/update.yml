@@ -4,6 +4,17 @@ on:
   schedule:
     - cron: '*/5 * * * *'
   workflow_dispatch:
+    inputs:
+      manual_variant:
+        description: 'Choose specific target to update'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - enhanced-yesnt10
+          - enhanced-akrusso
+          - scenebox
 
 jobs:
   update-repo:
@@ -22,6 +33,7 @@ jobs:
       - name: Run dynamic update script
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MANUAL_VARIANT: ${{ github.event.inputs.manual_variant }}
         run: python update_repo.py
 
       - name: Commit and push if repo.json changed
