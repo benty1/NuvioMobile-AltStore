@@ -4,21 +4,23 @@ import urllib.request
 import urllib.error
 import re
 
+def parse_version_tuple(v_str):
+    # Extracts all numbers from a version string to compare them logically (e.g., "0.4.14" -> (0, 4, 14))
+    numbers = re.findall(r'\d+', v_str)
+    return tuple(map(int, numbers)) if numbers else (0, 0, 0)
+
 def clean_version(tag):
     if not tag:
         return "1.0.0"
     
-    # Look for a standard semantic version pattern (e.g., 0.4.13)
     match = re.search(r'(\d+\.\d+\.\d+)', tag)
     if match:
         base_ver = match.group(1)
-        # Check if there's an attached build number (e.g., build117)
         build_match = re.search(r'(?:build|-)(\d+)', tag, re.IGNORECASE)
         if build_match:
             return f"{base_ver} (build {build_match.group(1)})"
         return base_ver
         
-    # Fallback: just strip leading 'v' or text prefixes if no semver found
     return re.sub(r'^[a-zA-Z_-]+v?', '', tag)
 
 def main():
@@ -66,7 +68,7 @@ def main():
     updated = False
 
     for target in targets:
-        print(f"[*] Fetching latest release info for {target['default_name']}...")
+        print(f"[*] Fetching latest release info for {target['default_name']} ({target.get('developerName')})...")
         req = urllib.request.Request(target["api"], headers=headers)
         
         try:
@@ -120,12 +122,19 @@ def main():
 
         app["name"] = target["default_name"]
         app["bundleIdentifier"] = target_bundle_id
-        app["iconURL"] = icon_url
+        if icon_url:
+            app["iconURL"] = icon_url
 
         versions = app.setdefault("versions", [])
         existing_versions = [v.get("version") for v in versions]
 
-        if version not in existing_versions:
+        # Check if this specific version string already exists
+        version_exists = version in existing_versions
+        
+        # Also check if any existing version is newer/equal logically
+        has_newer_or_equal = any(parse_version_tuple(v) >= parse_version_tuple(version) for v in existing_versions)
+
+        if not version_exists and not has_newer_or_equal:
             new_version_entry = {
                 "version": version,
                 "date": pub_date,
@@ -136,9 +145,9 @@ def main():
             }
             versions.insert(0, new_version_entry)
             updated = True
-            print(f"[+] Successfully added version {version} for {target['default_name']}")
+            print(f"[+] Successfully added newer version {version} for {target['default_name']}")
         else:
-            print(f"[*] {target['default_name']} is already up to date at version {version}.")
+            print(f"[*] {target['default_name']} version {version} is already present or older than current feed.")
 
     if updated:
         try:
