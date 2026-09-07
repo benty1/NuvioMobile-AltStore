@@ -1,25 +1,15 @@
-name: Update Nuvio Repository
+name: Update AltStore Repo
 
 on:
-  repository_dispatch:
-    types: [nuvio_release_update]
-  workflow_dispatch:
-    inputs:
-      variant:
-        description: 'App variant to check/update'
-        required: true
-        default: 'all'
-        type: choice
-        options:
-          - all
-          - official
-          - enhanced
+  schedule:
+    - cron: '*/5 * * * *' # Runs every 5 minutes (maximum frequency)
+  workflow_dispatch: # Allows manual triggers from the Actions tab
 
 jobs:
-  sync-repo:
+  update-repo:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write # Required to commit and push updated repo.json
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -29,16 +19,14 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Execute Sync Script
+      - name: Run dynamic update script
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          WEBHOOK_VARIANT: ${{ github.event.client_payload.variant }}
-          MANUAL_VARIANT: ${{ inputs.variant }}
-        run: python3 update_repo.py
+        run: python update_repo.py
 
-      - name: Commit and push if modified
+      - name: Commit and push if repo.json changed
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add repo.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update: Sync Nuvio and Enhanced repo versions" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update repo.json with latest releases [skip ci]" && git push)
