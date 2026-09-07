@@ -15,6 +15,6 @@
     "default_name": "Scenebox",
     "bundle_id": "com.donbytyqi.scenebox",
     "developerName": "Scenebox Team",
-    "iconURL": ""
+    "iconURL": "https://raw.githubusercontent.com/donbytyqi/scenebox/refs/heads/main/WatchBox/Assets.xcassets/AppIcon.appiconset/appicon.png"
   }
 ]
