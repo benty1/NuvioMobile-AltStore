@@ -1,4 +1,4 @@
-name: Update AltStore Repo ASAP
+name: Update AltStore Repo
 
 on:
   schedule:
@@ -9,7 +9,7 @@ jobs:
   update-repo:
     runs-on: ubuntu-latest
     permissions:
-si      contents: write
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
