@@ -20,6 +20,14 @@
       "iconURL": "https://raw.githubusercontent.com/yesnt10/NuvioMobile-Enhanced/refs/heads/enhanced/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
       "versions": [
         {
+          "version": "0.4.15",
+          "date": "2026-09-09",
+          "localizedDescription": "## Upstream changelog:\r\n- fix(auth): synchronize shared client initialization @tapframe\r\n- fix(home): restore hero position when switching profiles @tapframe\r\n- fix(playback): disable play when no sou...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.4.15/Nuvio-v0.4.15-Enhanced.ipa",
+          "size": 67833285,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "0.4.13 (build 117)",
           "date": "2026-09-02",
           "localizedDescription": "Integrated upstream NuvioMobile changes and added Telegram account integration.",
