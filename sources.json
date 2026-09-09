@@ -21,9 +21,9 @@
     "key": "scenebox",
     "api": "https://api.github.com/repos/donbytyqi/scenebox/releases/latest",
     "match_key": "Scenebox",
-    "default_name": "Scenebox",
-    "bundle_id": "com.donbytyqi.scenebox",
-    "developerName": "Scenebox Team",
+    "default_name": "SceneBox",
+    "bundle_id": "app.scenebox.SceneBox",
+    "developerName": "donbytyqi",
     "iconURL": "https://raw.githubusercontent.com/donbytyqi/scenebox/refs/heads/main/WatchBox/Assets.xcassets/AppIcon.appiconset/appicon.png"
   }
 ]
