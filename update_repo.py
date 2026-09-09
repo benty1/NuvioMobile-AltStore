@@ -5,7 +5,6 @@ import urllib.error
 import re
 
 def parse_version_tuple(v_str):
-    # Extracts all numbers from a version string to compare them logically (e.g., "0.4.14" -> (0, 4, 14))
     numbers = re.findall(r'\d+', v_str)
     return tuple(map(int, numbers)) if numbers else (0, 0, 0)
 
@@ -25,11 +24,7 @@ def clean_version(tag):
 
 def main():
     token = os.environ.get("GH_TOKEN")
-    webhook_variant = os.environ.get("WEBHOOK_VARIANT")
-    manual_variant = os.environ.get("MANUAL_VARIANT")
-
-    target_choice = webhook_variant if webhook_variant else (manual_variant if manual_variant else "all")
-    print(f"[*] Execution target mode: {target_choice}")
+    print("[*] Execution target mode: all (dynamic sources scan)")
 
     headers = {"User-Agent": "Nuvio-Repo-Sync-Bot/1.0"}
     if token:
@@ -42,13 +37,10 @@ def main():
 
     try:
         with open(sources_path, "r", encoding="utf-8") as f:
-            all_targets = json.load(f)
+            targets = json.load(f)
     except json.JSONDecodeError as e:
         print(f"[!] Error parsing {sources_path}: {e}")
         exit(1)
-
-    valid_keys = [t["key"] for t in all_targets]
-    targets = [t for t in all_targets if t["key"] == target_choice] if target_choice in valid_keys else all_targets
 
     json_path = "repo.json"
     if not os.path.exists(json_path):
@@ -67,87 +59,134 @@ def main():
 
     updated = False
 
+    bundled_targets = {}
     for target in targets:
-        print(f"[*] Fetching latest release info for {target['default_name']} ({target.get('developerName')})...")
-        req = urllib.request.Request(target["api"], headers=headers)
-        
-        try:
-            with urllib.request.urlopen(req) as response:
-                data = json.loads(response.read().decode())
-        except urllib.error.HTTPError as e:
-            print(f"[!] HTTP error fetching {target['default_name']}: {e.code} - {e.reason}")
-            continue
-        except Exception as e:
-            print(f"[!] Failed to fetch release for {target['default_name']}: {e}")
+        b_id = target["bundle_id"]
+        bundled_targets.setdefault(b_id, []).append(target)
+
+    for bundle_id, group in bundled_targets.items():
+        highest_version_data = None
+        highest_version_tuple = (-1,)
+        best_target = group[0]
+
+        print(f"[*] Evaluating sources for bundle identifier: {bundle_id}")
+
+        for target in group:
+            print(f" -> Checking upstream: {target['default_name']} ({target.get('developerName')}) [{target['api']}]")
+            req = urllib.request.Request(target["api"], headers=headers)
+            
+            try:
+                with urllib.request.urlopen(req) as response:
+                    data = json.loads(response.read().decode())
+            except urllib.error.HTTPError as e:
+                print(f"    [!] HTTP error: {e.code} - {e.reason}")
+                continue
+            except Exception as e:
+                print(f"    [!] Failed to fetch release: {e}")
+                continue
+
+            tag = data.get("tag_name")
+            if not tag:
+                print(f"    [!] No tag_name found.")
+                continue
+
+            version = clean_version(tag)
+            v_tuple = parse_version_tuple(version)
+
+            selected_asset = None
+            for asset in data.get("assets", []):
+                name = asset.get("name", "").lower()
+                if name.endswith(".ipa"):
+                    if bundle_id == "com.nuvio.enhanced" and "tvos" in name:
+                        continue
+                    selected_asset = asset
+                    break
+            
+            if not selected_asset:
+                for asset in data.get("assets", []):
+                    if asset.get("name", "").endswith(".ipa"):
+                        selected_asset = asset
+                        break
+
+            if not selected_asset:
+                print(f"    [!] No valid .ipa asset found in latest release.")
+                continue
+
+            print(f"    [+] Found version {version} (Tuple: {v_tuple}) from {target.get('developerName')}")
+
+            if v_tuple > highest_version_tuple:
+                highest_version_tuple = v_tuple
+                highest_version_data = data
+                best_target = target
+
+        if not highest_version_data:
+            print(f"[!] No valid releases found across sources for {bundle_id}.")
             continue
 
-        tag = data.get("tag_name")
-        if not tag:
-            print(f"[!] No tag_name found for {target['default_name']}.")
-            continue
-
+        tag = highest_version_data.get("tag_name")
         version = clean_version(tag)
-        pub_date = data.get("published_at", "").split("T")[0]
-        body = data.get("body", "No release notes provided.")
+        pub_date = highest_version_data.get("published_at", "").split("T")[0]
+        body = highest_version_data.get("body", "No release notes provided.")
 
         ipa_url = ""
-        ipa_size = 0
-        for asset in data.get("assets", []):
-            asset_name = asset.get("name", "")
-            if asset_name.endswith(".ipa"):
+        ipa_size = 50000000
+        for asset in highest_version_data.get("assets", []):
+            name = asset.get("name", "").lower()
+            if name.endswith(".ipa"):
+                if bundle_id == "com.nuvio.enhanced" and "tvos" in name:
+                    continue
                 ipa_url = asset.get("browser_download_url")
                 ipa_size = asset.get("size", 50000000)
                 break
-
+        
         if not ipa_url:
-            print(f"[!] No .ipa asset found in the latest release for {target['default_name']}.")
-            continue
+            for asset in highest_version_data.get("assets", []):
+                if asset.get("name", "").endswith(".ipa"):
+                    ipa_url = asset.get("browser_download_url")
+                    ipa_size = asset.get("size", 50000000)
+                    break
 
-        target_bundle_id = target["bundle_id"]
-        icon_url = target.get("iconURL", "")
-
-        app = next((item for item in source_data["apps"] if item.get("bundleIdentifier") == target_bundle_id), None)
+        # Find or create app block in repo.json
+        app = next((item for item in source_data["apps"] if item.get("bundleIdentifier") == bundle_id), None)
 
         if not app:
             app = {
-                "name": target["default_name"],
-                "bundleIdentifier": target_bundle_id,
-                "developerName": target.get("developerName", "Unknown Team"),
-                "subtitle": f"Official release ({target['default_name']})",
-                "localizedDescription": f"Automatically synced release for {target['default_name']}.",
-                "iconURL": icon_url,
+                "bundleIdentifier": bundle_id,
                 "versions": []
             }
             source_data["apps"].append(app)
 
-        app["name"] = target["default_name"]
-        app["bundleIdentifier"] = target_bundle_id
-        if icon_url:
-            app["iconURL"] = icon_url
+        # Force update all main app details to match the WINNING source (e.g. luqmanfadlli)
+        app["name"] = best_target["default_name"]
+        app["developerName"] = best_target.get("developerName", "Unknown Team")
+        app["subtitle"] = f"Official release ({best_target['default_name']})"
+        app["localizedDescription"] = f"Automatically synced release for {best_target['default_name']} via {best_target.get('developerName')}."
+        app["iconURL"] = best_target.get("iconURL", "")
+        app["tintColor"] = "#FF5733"
+        app["category"] = "entertainment"
 
         versions = app.setdefault("versions", [])
         existing_versions = [v.get("version") for v in versions]
-
-        # Check if this specific version string already exists
-        version_exists = version in existing_versions
-        
-        # Also check if any existing version is newer/equal logically
         has_newer_or_equal = any(parse_version_tuple(v) >= parse_version_tuple(version) for v in existing_versions)
 
-        if not version_exists and not has_newer_or_equal:
+        if not has_newer_or_equal:
             new_version_entry = {
                 "version": version,
                 "date": pub_date,
                 "localizedDescription": body[:200] + "..." if body else "No description.",
                 "downloadURL": ipa_url,
                 "size": ipa_size,
-                "minOSVersion": "15.0"
+                "minOSVersion": "16.1"
             }
             versions.insert(0, new_version_entry)
             updated = True
-            print(f"[+] Successfully added newer version {version} for {target['default_name']}")
+            print(f"[+] Winner selected: {best_target['default_name']} by {best_target.get('developerName')} with version {version}.")
         else:
-            print(f"[*] {target['default_name']} version {version} is already present or older than current feed.")
+            print(f"[*] Bundle {bundle_id} is already up to date, but metadata aligned to winner: {best_target.get('developerName')}.")
+            # Even if version exists, ensure developerName matches the current winner context if it changed
+            if app.get("developerName") != best_target.get("developerName"):
+                app["developerName"] = best_target.get("developerName")
+                updated = True
 
     if updated:
         try:
@@ -158,7 +197,7 @@ def main():
             print(f"[!] Failed to write to {json_path}: {e}")
             exit(1)
     else:
-        print("[*] No new versions detected; repo.json remains unchanged.")
+        print("[*] No changes detected; repo.json remains unchanged.")
 
 if __name__ == "__main__":
     main()
