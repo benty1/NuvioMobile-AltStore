@@ -16,7 +16,7 @@
       "bundleIdentifier": "com.nuvio.enhanced",
       "developerName": "luqmanfadlli",
       "subtitle": "Official release (Nuvio Enhanced)",
-      "localizedDescription": "Automatically synced release for Nuvio Enhanced.",
+      "localizedDescription": "Automatically synced release for Nuvio Enhanced via luqmanfadlli.",
       "iconURL": "https://raw.githubusercontent.com/yesnt10/NuvioMobile-Enhanced/refs/heads/enhanced/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
       "versions": [
         {
@@ -27,14 +27,16 @@
           "size": 67833285,
           "minOSVersion": "15.0"
         }
-      ]
+      ],
+      "tintColor": "#FF5733",
+      "category": "entertainment"
     },
     {
       "name": "SceneBox",
       "bundleIdentifier": "app.scenebox.SceneBox",
       "developerName": "donbytyqi",
       "subtitle": "Official release (SceneBox)",
-      "localizedDescription": "Automatically synced release for SceneBox.",
+      "localizedDescription": "Automatically synced release for SceneBox via donbytyqi.",
       "iconURL": "https://raw.githubusercontent.com/donbytyqi/scenebox/refs/heads/main/WatchBox/Assets.xcassets/AppIcon.appiconset/appicon.png",
       "versions": [
         {
@@ -45,7 +47,29 @@
           "size": 29544735,
           "minOSVersion": "15.0"
         }
-      ]
+      ],
+      "tintColor": "#FF5733",
+      "category": "entertainment"
+    },
+    {
+      "bundleIdentifier": "com.ayman.playtorriov3",
+      "versions": [
+        {
+          "version": "1.1.5",
+          "date": "2026-09-09",
+          "localizedDescription": "Downloader enhancements\r\nFixed streaming issues\r\nFixed audiobook generation\r\nAdded fullscreen mode\r\nUI Fixes...",
+          "downloadURL": "https://github.com/ayman708-UX/PlayTorrioV3/releases/download/v1.1.5/PlayTorrio-iOS.ipa",
+          "size": 48421258,
+          "minOSVersion": "16.1"
+        }
+      ],
+      "name": "PlayTorrio V3",
+      "developerName": "ayman708-UX",
+      "subtitle": "Official release (PlayTorrio V3)",
+      "localizedDescription": "Automatically synced release for PlayTorrio V3 via ayman708-UX.",
+      "iconURL": "https://raw.githubusercontent.com/ayman708-UX/PlayTorrioV3/main/assets/icon.png",
+      "tintColor": "#FF5733",
+      "category": "entertainment"
     }
   ]
 }
