@@ -25,5 +25,14 @@
     "bundle_id": "app.scenebox.SceneBox",
     "developerName": "donbytyqi",
     "iconURL": "https://raw.githubusercontent.com/donbytyqi/scenebox/refs/heads/main/WatchBox/Assets.xcassets/AppIcon.appiconset/appicon.png"
+  },
+  {
+    "key": "playtorriov3",
+    "api": "https://api.github.com/repos/ayman708-UX/PlayTorrioV3/releases/latest",
+    "match_key": "PlayTorrio",
+    "default_name": "PlayTorrio V3",
+    "bundle_id": "com.ayman.playtorriov3",
+    "developerName": "ayman708-UX",
+    "iconURL": "https://raw.githubusercontent.com/ayman708-UX/PlayTorrioV3/main/assets/icon.png"
   }
 ]
