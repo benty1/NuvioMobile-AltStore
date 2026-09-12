@@ -20,6 +20,14 @@
       "iconURL": "https://raw.githubusercontent.com/yesnt10/NuvioMobile-Enhanced/refs/heads/enhanced/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
       "versions": [
         {
+          "version": "0.4.17",
+          "date": "2026-09-12",
+          "localizedDescription": "- fix(plugins): restore iOS runtime compilation @tapframe\r\n- fix(player): disable binge group reuse by default @tapframe\r\n- perf(plugins): pause search during playback and match TV runtime (#1917) @ha...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.4.17/Nuvio-v0.4.17-Enhanced.ipa",
+          "size": 66030339,
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "0.4.16",
           "date": "2026-09-11",
           "localizedDescription": "- fix(home): settle hero carousel when returning @tapframe\r\n- fix(settings): require Trakt progress for continue watching window @tapframe\r\n- perf(ui): replace compottie spinner with native drawing @t...",
