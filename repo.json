@@ -95,6 +95,14 @@
       "bundleIdentifier": "com.ayman.playtorriov3",
       "versions": [
         {
+          "version": "1.1.6",
+          "date": "2026-09-16",
+          "localizedDescription": "Cloudstream extenstion support added\r\nUI Fixes\r\nMultistream added in iptv\r\nCustom channels added in iptv\r\nnew sources\r\nPlayer fixes\r\nMacOS Torrent streaming fixed\r\nMobile player audio, brightness cont...",
+          "downloadURL": "https://github.com/ayman708-UX/PlayTorrioV3/releases/download/v1.1.6/PlayTorrio-iOS.ipa",
+          "size": 48685274,
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "1.1.5",
           "date": "2026-09-09",
           "localizedDescription": "Downloader enhancements\r\nFixed streaming issues\r\nFixed audiobook generation\r\nAdded fullscreen mode\r\nUI Fixes...",
