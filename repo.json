@@ -96,6 +96,14 @@
       "iconURL": "https://raw.githubusercontent.com/donbytyqi/scenebox/refs/heads/main/WatchBox/Assets.xcassets/AppIcon.appiconset/appicon.png",
       "versions": [
         {
+          "version": "1.0.3",
+          "date": "2026-09-17",
+          "localizedDescription": "What's new\n\n- Trakt sync. Connect your Trakt account in Profile and your watchlist and watched history stay in sync.\n- Picture in Picture on iPhone and iPad.\n- Continue Watching now resumes straight i...",
+          "downloadURL": "https://github.com/donbytyqi/scenebox/releases/download/v1.0.3/SceneBox-1.0.3-tvOS.ipa",
+          "size": 29743269,
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "1.0.2",
           "date": "2026-08-22",
           "localizedDescription": "Mostly stuff you asked for.\n\n- You don't need an account anymore. There's a \"Continue as guest\" button on the login screen. Everything you watch is saved on the device, and if you make an account late...",
