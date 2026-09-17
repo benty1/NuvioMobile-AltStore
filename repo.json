@@ -20,6 +20,14 @@
       "iconURL": "https://raw.githubusercontent.com/yesnt10/NuvioMobile-Enhanced/refs/heads/enhanced/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
       "versions": [
         {
+          "version": "0.4.22",
+          "date": "2026-09-17",
+          "localizedDescription": "- feat(updater): add stable and beta update channels @tapframe\r\n- feat(tmdb): add personal API key override with credential sync @tapframe\r\n- feat(details): parse addon episode runtimes @tapframe\r\n- U...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.4.22/Nuvio-v0.4.22-Enhanced.ipa",
+          "size": 66450409,
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "0.4.21",
           "date": "2026-09-16",
           "localizedDescription": "- fix(home): match continue watching badge colors to tv @tapframe\r\n- perf(navigation): reduce root tab switch stalls @tapframe\r\n- Add TVDB anime ID preference to avoid per-season IMDB splits (#1952) @...",
