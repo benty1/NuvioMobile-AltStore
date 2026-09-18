@@ -20,6 +20,14 @@
       "iconURL": "https://raw.githubusercontent.com/yesnt10/NuvioMobile-Enhanced/refs/heads/enhanced/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
       "versions": [
         {
+          "version": "0.4.24",
+          "date": "2026-09-18",
+          "localizedDescription": "- feat(trailers): let each hero trailer start with sound @luqmanfadlli\r\n- fix(ios): open the downloads folder in Files @luqmanfadlli\r\n- feat(downloads): add an optional download button to the details ...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.4.24-beta/Nuvio-0.4.24-Enhanced.ipa",
+          "size": 66911481,
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "0.4.23",
           "date": "2026-09-17",
           "localizedDescription": "- fix(simkl): retain posters when marking items watched @tapframe\r\n- fix(home): restore wide continue watching sizing @tapframe\r\n- i18n(vi): update latest Vietnamese strings (#1975) @blueocean2308\r\n- ...",
