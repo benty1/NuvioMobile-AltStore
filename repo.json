@@ -13,7 +13,7 @@
   "apps": [
     {
       "name": "Nuvio Enhanced",
-      "bundleIdentifier": "com.nuvio.enhanced",
+      "bundleIdentifier": "com.nuvio.media",
       "developerName": "luqmanfadlli",
       "subtitle": "Official release (Nuvio Enhanced)",
       "localizedDescription": "Automatically synced release for Nuvio Enhanced via luqmanfadlli.",
@@ -115,7 +115,7 @@
           "version": "1.0.3",
           "date": "2026-09-17",
           "localizedDescription": "What's new\n\n- Trakt sync. Connect your Trakt account in Profile and your watchlist and watched history stay in sync.\n- Picture in Picture on iPhone and iPad.\n- Continue Watching now resumes straight i...",
-          "downloadURL": "https://github.com/donbytyqi/scenebox/releases/download/v1.0.3/SceneBox-1.0.3-tvOS.ipa",
+          "downloadURL": "https://github.com/donbytyqi/scenebox/releases/download/v1.0.3/SceneBox-1.0.3.ipa"
           "size": 29743269,
           "minOSVersion": "16.1"
         },
