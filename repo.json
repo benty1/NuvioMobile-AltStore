@@ -50,6 +50,26 @@
       ],
       "tintColor": "#FF5733",
       "category": "entertainment"
+    },
+    {
+      "bundleIdentifier": "com.ayman.playtorriov3",
+      "versions": [
+        {
+          "version": "1.1.6",
+          "date": "2026-09-16",
+          "localizedDescription": "Cloudstream extenstion support added\r\nUI Fixes\r\nMultistream added in iptv\r\nCustom channels added in iptv\r\nnew sources\r\nPlayer fixes\r\nMacOS Torrent streaming fixed\r\nMobile player audio, brightness cont...",
+          "downloadURL": "https://github.com/ayman708-UX/PlayTorrioV3/releases/download/v1.1.6/PlayTorrio-iOS.ipa",
+          "size": 48685274,
+          "minOSVersion": "16.1"
+        }
+      ],
+      "name": "PlayTorrio V3",
+      "developerName": "ayman708-UX",
+      "subtitle": "Official release (PlayTorrio V3)",
+      "localizedDescription": "Automatically synced release for PlayTorrio V3 via ayman708-UX.",
+      "iconURL": "https://raw.githubusercontent.com/ayman708-UX/PlayTorrioV3/main/assets/icon.png",
+      "tintColor": "#FF5733",
+      "category": "entertainment"
     }
   ]
 }
