@@ -75,6 +75,14 @@
       "bundleIdentifier": "com.nuvio.enhanced.luqmanfadlli",
       "versions": [
         {
+          "version": "0.4.26",
+          "date": "2026-09-21",
+          "localizedDescription": "- fix(merge): keep source pinning in the shared provider filter row @luqmanfadlli\r\n- feat(downloads): show the download button by default @luqmanfadlli\r\n- fix(navigation): keep the iPad floating bar o...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.4.26-beta/Nuvio-0.4.26-Enhanced.ipa",
+          "size": 67100856,
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "0.4.25",
           "date": "2026-09-19",
           "localizedDescription": "- fix(details): keep the hero blend layer below the content @luqmanfadlli\r\n- feat(player): show seek, volume, and brightness values in the new layout @luqmanfadlli\r\n- fix(home): prevent hero flash whe...",
