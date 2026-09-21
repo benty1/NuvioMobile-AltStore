@@ -14,10 +14,10 @@
     {
       "name": "Nuvio Enhanced",
       "bundleIdentifier": "com.nuvio.enhanced",
-      "developerName": "luqmanfadlli",
+      "developerName": "yesnt10",
       "subtitle": "Official release (Nuvio Enhanced)",
-      "localizedDescription": "Automatically synced release for Nuvio Enhanced via luqmanfadlli.",
-      "iconURL": "https://raw.githubusercontent.com/yesnt10/NuvioMobile-Enhanced/refs/heads/enhanced/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
+      "localizedDescription": "Automatically synced release for Nuvio Enhanced via yesnt10.",
+      "iconURL": "https://raw.githubusercontent.com/yesnt10/NuvioMobile-Enhanced/refs/heads/enhanced/iosApp/iosApp/Assets.xcassets/IconEnhanced.appiconset/icon-1024.png",
       "versions": [
         {
           "version": "0.4.25",
@@ -68,6 +68,26 @@
       "subtitle": "Official release (PlayTorrio V3)",
       "localizedDescription": "Automatically synced release for PlayTorrio V3 via ayman708-UX.",
       "iconURL": "https://raw.githubusercontent.com/ayman708-UX/PlayTorrioV3/main/assets/icon.png",
+      "tintColor": "#FF5733",
+      "category": "entertainment"
+    },
+    {
+      "bundleIdentifier": "com.nuvio.enhanced.luqmanfadlli",
+      "versions": [
+        {
+          "version": "0.4.25",
+          "date": "2026-09-19",
+          "localizedDescription": "- fix(details): keep the hero blend layer below the content @luqmanfadlli\r\n- feat(player): show seek, volume, and brightness values in the new layout @luqmanfadlli\r\n- fix(home): prevent hero flash whe...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.4.25-beta/Nuvio-0.4.25-Enhanced.ipa",
+          "size": 66955980,
+          "minOSVersion": "16.1"
+        }
+      ],
+      "name": "Nuvio Enhanced",
+      "developerName": "luqmanfadlli",
+      "subtitle": "Official release (Nuvio Enhanced)",
+      "localizedDescription": "Automatically synced release for Nuvio Enhanced via luqmanfadlli.",
+      "iconURL": "https://raw.githubusercontent.com/yesnt10/NuvioMobile-Enhanced/refs/heads/enhanced/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
       "tintColor": "#FF5733",
       "category": "entertainment"
     }
