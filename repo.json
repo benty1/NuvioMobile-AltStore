@@ -13,7 +13,7 @@
   "apps": [
     {
       "name": "Nuvio Enhanced",
-      "bundleIdentifier": "com.nuvio.media",
+      "bundleIdentifier": "com.nuvio.enhanced",
       "developerName": "luqmanfadlli",
       "subtitle": "Official release (Nuvio Enhanced)",
       "localizedDescription": "Automatically synced release for Nuvio Enhanced via luqmanfadlli.",
@@ -22,82 +22,10 @@
         {
           "version": "0.4.25",
           "date": "2026-09-19",
-          "localizedDescription": "- fix(details): keep the hero blend layer below the content @luqmanfadlli\r\n- feat(player): show seek, volume, and brightness values in the new layout @luqmanfadlli\r\n- fix(home): prevent hero flash whe...",
+          "localizedDescription": "- fix(details): keep the hero blend layer below the content @luqmanfadlli\n- feat(player): show seek, volume, and brightness values in the new layout @luqmanfadlli\n- fix(home): prevent hero flash whe...",
           "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.4.25-beta/Nuvio-0.4.25-Enhanced.ipa",
           "size": 66955980,
           "minOSVersion": "16.1"
-        },
-        {
-          "version": "0.4.24",
-          "date": "2026-09-18",
-          "localizedDescription": "- feat(trailers): let each hero trailer start with sound @luqmanfadlli\r\n- fix(ios): open the downloads folder in Files @luqmanfadlli\r\n- feat(downloads): add an optional download button to the details ...",
-          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.4.24-beta/Nuvio-0.4.24-Enhanced.ipa",
-          "size": 66911481,
-          "minOSVersion": "16.1"
-        },
-        {
-          "version": "0.4.23",
-          "date": "2026-09-17",
-          "localizedDescription": "- fix(simkl): retain posters when marking items watched @tapframe\r\n- fix(home): restore wide continue watching sizing @tapframe\r\n- i18n(vi): update latest Vietnamese strings (#1975) @blueocean2308\r\n- ...",
-          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.4.23-beta/Nuvio-v0.4.23-Enhanced.ipa",
-          "size": 66509993,
-          "minOSVersion": "16.1"
-        },
-        {
-          "version": "0.4.22",
-          "date": "2026-09-17",
-          "localizedDescription": "- feat(updater): add stable and beta update channels @tapframe\r\n- feat(tmdb): add personal API key override with credential sync @tapframe\r\n- feat(details): parse addon episode runtimes @tapframe\r\n- U...",
-          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.4.22/Nuvio-v0.4.22-Enhanced.ipa",
-          "size": 66450409,
-          "minOSVersion": "16.1"
-        },
-        {
-          "version": "0.4.21",
-          "date": "2026-09-16",
-          "localizedDescription": "- fix(home): match continue watching badge colors to tv @tapframe\r\n- perf(navigation): reduce root tab switch stalls @tapframe\r\n- Add TVDB anime ID preference to avoid per-season IMDB splits (#1952) @...",
-          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.4.21/Nuvio-v0.4.21-Enhanced.ipa",
-          "size": 66287229,
-          "minOSVersion": "16.1"
-        },
-        {
-          "version": "0.4.20",
-          "date": "2026-09-14",
-          "localizedDescription": "- feat(streams): add mobile background selection @tapframe\r\n- fix(player): center loading title and logo @tapframe\r\n- feat(player): dismiss next episode prompt with a right swipe @tapframe\r\n- fix(deta...",
-          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.4.20/Nuvio-v0.4.20-Enhanced.ipa",
-          "size": 66202899,
-          "minOSVersion": "16.1"
-        },
-        {
-          "version": "0.4.19",
-          "date": "2026-09-14",
-          "localizedDescription": "- fix(profiles): stabilize popup size transitions @tapframe\r\n- fix(details): apply poster radius to episode list cards @tapframe\r\n- fix(home): apply poster settings to continue watching cards @tapfram...",
-          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.4.19/Nuvio-v0.4.19-Enhanced.ipa",
-          "size": 66122278,
-          "minOSVersion": "16.1"
-        },
-        {
-          "version": "0.4.17",
-          "date": "2026-09-12",
-          "localizedDescription": "- fix(plugins): restore iOS runtime compilation @tapframe\r\n- fix(player): disable binge group reuse by default @tapframe\r\n- perf(plugins): pause search during playback and match TV runtime (#1917) @ha...",
-          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.4.17/Nuvio-v0.4.17-Enhanced.ipa",
-          "size": 66030339,
-          "minOSVersion": "16.1"
-        },
-        {
-          "version": "0.4.16",
-          "date": "2026-09-11",
-          "localizedDescription": "- fix(home): settle hero carousel when returning @tapframe\r\n- fix(settings): require Trakt progress for continue watching window @tapframe\r\n- perf(ui): replace compottie spinner with native drawing @t...",
-          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.4.16/Nuvio-v0.4.16-Enhanced.ipa",
-          "size": 66025212,
-          "minOSVersion": "16.1"
-        },
-        {
-          "version": "0.4.15",
-          "date": "2026-09-09",
-          "localizedDescription": "## Upstream changelog:\r\n- fix(auth): synchronize shared client initialization @tapframe\r\n- fix(home): restore hero position when switching profiles @tapframe\r\n- fix(playback): disable play when no sou...",
-          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.4.15/Nuvio-v0.4.15-Enhanced.ipa",
-          "size": 67833285,
-          "minOSVersion": "15.0"
         }
       ],
       "tintColor": "#FF5733",
@@ -113,49 +41,13 @@
       "versions": [
         {
           "version": "1.0.3",
-          "date": "2026-09-17",
-          "localizedDescription": "What's new\n\n- Trakt sync. Connect your Trakt account in Profile and your watchlist and watched history stay in sync.\n- Picture in Picture on iPhone and iPad.\n- Continue Watching now resumes straight i...",
-          "downloadURL": "https://github.com/donbytyqi/scenebox/releases/download/v1.0.3/SceneBox-1.0.3.ipa"
-          "size": 29743269,
-          "minOSVersion": "16.1"
-        },
-        {
-          "version": "1.0.2",
-          "date": "2026-08-22",
-          "localizedDescription": "Mostly stuff you asked for.\n\n- You don't need an account anymore. There's a \"Continue as guest\" button on the login screen. Everything you watch is saved on the device, and if you make an account late...",
-          "downloadURL": "https://github.com/donbytyqi/scenebox/releases/download/v1.0.2/SceneBox-1.0.2-tvOS.ipa",
-          "size": 29544735,
-          "minOSVersion": "15.0"
-        }
-      ],
-      "tintColor": "#FF5733",
-      "category": "entertainment"
-    },
-    {
-      "bundleIdentifier": "com.ayman.playtorriov3",
-      "versions": [
-        {
-          "version": "1.1.6",
-          "date": "2026-09-16",
-          "localizedDescription": "Cloudstream extenstion support added\r\nUI Fixes\r\nMultistream added in iptv\r\nCustom channels added in iptv\r\nnew sources\r\nPlayer fixes\r\nMacOS Torrent streaming fixed\r\nMobile player audio, brightness cont...",
-          "downloadURL": "https://github.com/ayman708-UX/PlayTorrioV3/releases/download/v1.1.6/PlayTorrio-iOS.ipa",
-          "size": 48685274,
-          "minOSVersion": "16.1"
-        },
-        {
-          "version": "1.1.5",
-          "date": "2026-09-09",
-          "localizedDescription": "Downloader enhancements\r\nFixed streaming issues\r\nFixed audiobook generation\r\nAdded fullscreen mode\r\nUI Fixes...",
-          "downloadURL": "https://github.com/ayman708-UX/PlayTorrioV3/releases/download/v1.1.5/PlayTorrio-iOS.ipa",
-          "size": 48421258,
+          "date": "2026-09-15",
+          "localizedDescription": "Latest release of SceneBox streaming app.",
+          "downloadURL": "https://github.com/donbytyqi/scenebox/releases/download/v1.0.3/SceneBox-1.0.3.ipa",
+          "size": 50000000,
           "minOSVersion": "16.1"
         }
       ],
-      "name": "PlayTorrio V3",
-      "developerName": "ayman708-UX",
-      "subtitle": "Official release (PlayTorrio V3)",
-      "localizedDescription": "Automatically synced release for PlayTorrio V3 via ayman708-UX.",
-      "iconURL": "https://raw.githubusercontent.com/ayman708-UX/PlayTorrioV3/main/assets/icon.png",
       "tintColor": "#FF5733",
       "category": "entertainment"
     }
