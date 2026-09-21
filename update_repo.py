@@ -93,20 +93,23 @@ def main():
             version = clean_version(tag)
             v_tuple = parse_version_tuple(version)
 
+            # --- PATCHED SECTION 1: Prioritize non-tvOS IPAs for ALL bundle IDs ---
             selected_asset = None
             for asset in data.get("assets", []):
                 name = asset.get("name", "").lower()
-                if name.endswith(".ipa"):
-                    if bundle_id == "com.nuvio.enhanced" and "tvos" in name:
-                        continue
+                # Skip ANY tvOS ipa to ensure the iOS version is picked first
+                if name.endswith(".ipa") and "tvos" not in name:
                     selected_asset = asset
                     break
             
+            # Fallback: if no non-tvOS ipa is found, pick any ipa
             if not selected_asset:
                 for asset in data.get("assets", []):
-                    if asset.get("name", "").endswith(".ipa"):
+                    name = asset.get("name", "").lower()
+                    if name.endswith(".ipa"):
                         selected_asset = asset
                         break
+            # -----------------------------------------------------------------------
 
             if not selected_asset:
                 print(f"    [!] No valid .ipa asset found in latest release.")
@@ -128,23 +131,26 @@ def main():
         pub_date = highest_version_data.get("published_at", "").split("T")[0]
         body = highest_version_data.get("body", "No release notes provided.")
 
+        # --- PATCHED SECTION 2: Prioritize non-tvOS IPAs for URL extraction ---
         ipa_url = ""
         ipa_size = 50000000
         for asset in highest_version_data.get("assets", []):
             name = asset.get("name", "").lower()
-            if name.endswith(".ipa"):
-                if bundle_id == "com.nuvio.enhanced" and "tvos" in name:
-                    continue
+            # Skip ANY tvOS ipa to ensure the iOS version is picked first
+            if name.endswith(".ipa") and "tvos" not in name:
                 ipa_url = asset.get("browser_download_url")
                 ipa_size = asset.get("size", 50000000)
                 break
         
+        # Fallback: if no non-tvOS ipa is found, pick any ipa
         if not ipa_url:
             for asset in highest_version_data.get("assets", []):
-                if asset.get("name", "").endswith(".ipa"):
+                name = asset.get("name", "").lower()
+                if name.endswith(".ipa"):
                     ipa_url = asset.get("browser_download_url")
                     ipa_size = asset.get("size", 50000000)
                     break
+        # -----------------------------------------------------------------------
 
         # Find or create app block in repo.json
         app = next((item for item in source_data["apps"] if item.get("bundleIdentifier") == bundle_id), None)
@@ -156,7 +162,7 @@ def main():
             }
             source_data["apps"].append(app)
 
-        # Force update all main app details to match the WINNING source (e.g. luqmanfadlli)
+        # Force update all main app details to match the WINNING source
         app["name"] = best_target["default_name"]
         app["developerName"] = best_target.get("developerName", "Unknown Team")
         app["subtitle"] = f"Official release ({best_target['default_name']})"
