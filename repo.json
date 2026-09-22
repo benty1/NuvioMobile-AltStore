@@ -75,6 +75,14 @@
       "bundleIdentifier": "com.nuvio.enhanced.luqmanfadlli",
       "versions": [
         {
+          "version": "0.5.0",
+          "date": "2026-09-22",
+          "localizedDescription": "- fix(ios): end the downloads Live Activity background task on the main actor @luqmanfadlli\r\n- feat(player): snooze the movie recommendation card for a minute on dismiss @luqmanfadlli\r\n- feat(player):...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.5.0-beta/Nuvio-0.5.0-Enhanced.ipa",
+          "size": 67967466,
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "0.4.26",
           "date": "2026-09-21",
           "localizedDescription": "- fix(merge): keep source pinning in the shared provider filter row @luqmanfadlli\r\n- feat(downloads): show the download button by default @luqmanfadlli\r\n- fix(navigation): keep the iPad floating bar o...",
