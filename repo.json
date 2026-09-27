@@ -83,6 +83,14 @@
       "bundleIdentifier": "com.nuvio.enhanced.luqmanfadlli",
       "versions": [
         {
+          "version": "0.5.3",
+          "date": "2026-09-27",
+          "localizedDescription": "- fix(ios): restore Now Playing controls by dropping mixWithOthers @luqmanfadlli\r\n- fix(home): use continue watching poster pattern @tapframe\r\n- fix(shuffle): open sheet at full height @tapframe\r\n- fi...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.5.3-beta/Nuvio-0.5.3-Enhanced.ipa",
+          "size": 68569946,
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "0.5.2",
           "date": "2026-09-26",
           "localizedDescription": "- fix(catalog): handle Simkl source in More Like This \"View all\" @luqmanfadlli\r\n- fix(streams): use multiplatform synchronization @tapframe\r\n- fix(exo): update buffer defaults @tapframe\r\n- update engi...",
