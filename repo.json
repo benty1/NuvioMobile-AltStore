@@ -83,6 +83,14 @@
       "bundleIdentifier": "com.nuvio.enhanced.luqmanfadlli",
       "versions": [
         {
+          "version": "0.5.4",
+          "date": "2026-09-28",
+          "localizedDescription": "- fix(player): ignore short clips for tracking @tapframe\r\n- fix(ios): update quickjs to 1.0.15 @tapframe\r\n- feat(ratings): star rating row under details actions, fit icon row, episode badge @luqmanfad...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.5.4-beta/Nuvio-0.5.4-Enhanced.ipa",
+          "size": 68808545,
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "0.5.3",
           "date": "2026-09-27",
           "localizedDescription": "- fix(ios): restore Now Playing controls by dropping mixWithOthers @luqmanfadlli\r\n- fix(home): use continue watching poster pattern @tapframe\r\n- fix(shuffle): open sheet at full height @tapframe\r\n- fi...",
