@@ -83,6 +83,14 @@
       "bundleIdentifier": "com.nuvio.enhanced.luqmanfadlli",
       "versions": [
         {
+          "version": "0.5.5",
+          "date": "2026-10-01",
+          "localizedDescription": "- feat(visualsubtitlesync) @chrisk325\r\n- feat(i18n): add Bengali (\u09ac\u09be\u0982\u09b2\u09be) language support and UI localization @TanvirSdq\r\n- i18n(el): translate new strings and finish the Greek wording sweep @nosvased...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.5.5-beta/Nuvio-0.5.5-Enhanced.ipa",
+          "size": 69276861,
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "0.5.4",
           "date": "2026-09-28",
           "localizedDescription": "- fix(player): ignore short clips for tracking @tapframe\r\n- fix(ios): update quickjs to 1.0.15 @tapframe\r\n- feat(ratings): star rating row under details actions, fit icon row, episode badge @luqmanfad...",
