@@ -83,6 +83,14 @@
       "bundleIdentifier": "com.nuvio.enhanced.luqmanfadlli",
       "versions": [
         {
+          "version": "0.5.6",
+          "date": "2026-10-03",
+          "localizedDescription": "- fix(settings): restore missing isIos import in AppearanceSettingsPage @luqmanfadlli \r\n- feat(details): use desktop hero layout on tablets @tapframe\r\n- feat(settings): show restart prompt when layout...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.5.6-beta/Nuvio-0.5.6-Enhanced.ipa",
+          "size": 69320719,
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "0.5.5",
           "date": "2026-10-01",
           "localizedDescription": "- feat(visualsubtitlesync) @chrisk325\r\n- feat(i18n): add Bengali (\u09ac\u09be\u0982\u09b2\u09be) language support and UI localization @TanvirSdq\r\n- i18n(el): translate new strings and finish the Greek wording sweep @nosvased...",
