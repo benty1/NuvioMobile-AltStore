@@ -83,6 +83,14 @@
       "bundleIdentifier": "com.nuvio.enhanced.luqmanfadlli",
       "versions": [
         {
+          "version": "0.5.7",
+          "date": "2026-10-07",
+          "localizedDescription": "- fix(buffer): make the java heap large @chrisk325\r\n- feat(player): make the movie recommendation card less intrusive @luqmanfadlli\r\n- feat(player): show buffered range on the seek bar @luqmanfadlli\r\n...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.5.7-beta/Nuvio-0.5.7-Enhanced.ipa",
+          "size": 69669767,
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "0.5.6",
           "date": "2026-10-03",
           "localizedDescription": "- fix(settings): restore missing isIos import in AppearanceSettingsPage @luqmanfadlli \r\n- feat(details): use desktop hero layout on tablets @tapframe\r\n- feat(settings): show restart prompt when layout...",
