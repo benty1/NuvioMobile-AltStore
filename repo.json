@@ -83,6 +83,14 @@
       "bundleIdentifier": "com.nuvio.enhanced.luqmanfadlli",
       "versions": [
         {
+          "version": "0.5.8",
+          "date": "2026-10-09",
+          "localizedDescription": "- fix(player): hide upstream's Stream Info action in the new layout @luqmanfadlli \r\n- fix(player): keep controls visible while a finger rests on the seek bar @luqmanfadlli\r\n- fix(omdb): only call OMDb...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.5.8-beta/nuvio-0.5.8-enhanced.ipa",
+          "size": 70490675,
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "0.5.7",
           "date": "2026-10-07",
           "localizedDescription": "- fix(buffer): make the java heap large @chrisk325\r\n- feat(player): make the movie recommendation card less intrusive @luqmanfadlli\r\n- feat(player): show buffered range on the seek bar @luqmanfadlli\r\n...",
