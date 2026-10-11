@@ -83,6 +83,14 @@
       "bundleIdentifier": "com.nuvio.enhanced.luqmanfadlli",
       "versions": [
         {
+          "version": "0.5.9",
+          "date": "2026-10-11",
+          "localizedDescription": "- fix(ios): restore Kotlin/Native build for biometric profile lock @luqmanfadlli \r\n- feat(tracking): add anilist integration with id tracking, scrobbling, and library @chrisk325\r\n- feat(login): add bi...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.5.9-beta/nuvio-0.5.9-enhanced.ipa",
+          "size": 70941356,
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "0.5.8",
           "date": "2026-10-09",
           "localizedDescription": "- fix(player): hide upstream's Stream Info action in the new layout @luqmanfadlli \r\n- fix(player): keep controls visible while a finger rests on the seek bar @luqmanfadlli\r\n- fix(omdb): only call OMDb...",
