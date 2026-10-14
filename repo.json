@@ -83,6 +83,14 @@
       "bundleIdentifier": "com.nuvio.enhanced.luqmanfadlli",
       "versions": [
         {
+          "version": "0.5.10",
+          "date": "2026-10-14",
+          "localizedDescription": "feat(ios): adopt @albertovinaroz morphed tabbar via native segmented glass bar @luqmanfadlli\r\nfix(details): start from the top of the list after re-sorting episodes @luqmanfadlli\r\nfeat(details): show ...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.5.10-beta/nuvio-0.5.10-enhanced-release.ipa",
+          "size": 71604983,
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "0.5.9",
           "date": "2026-10-11",
           "localizedDescription": "- fix(ios): restore Kotlin/Native build for biometric profile lock @luqmanfadlli \r\n- feat(tracking): add anilist integration with id tracking, scrobbling, and library @chrisk325\r\n- feat(login): add bi...",
