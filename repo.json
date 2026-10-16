@@ -83,6 +83,14 @@
       "bundleIdentifier": "com.nuvio.enhanced.luqmanfadlli",
       "versions": [
         {
+          "version": "0.6.1",
+          "date": "2026-10-16",
+          "localizedDescription": "# 0.6.1-beta:\r\n- fix(ios): merge duplicate MetalLayer.nextDrawable overrides @luqmanfadlli \r\n- fix(streams): adapt the party shared-stream header to fork pinning @luqmanfadlli\r\n- fix(party): let only ...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.6.1-beta/nuvio-0.6.1-enhanced-release.ipa",
+          "size": 72640851,
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "0.5.10",
           "date": "2026-10-14",
           "localizedDescription": "feat(ios): adopt @albertovinaroz morphed tabbar via native segmented glass bar @luqmanfadlli\r\nfix(details): start from the top of the list after re-sorting episodes @luqmanfadlli\r\nfeat(details): show ...",
