@@ -83,6 +83,14 @@
       "bundleIdentifier": "com.nuvio.enhanced.luqmanfadlli",
       "versions": [
         {
+          "version": "0.6.2",
+          "date": "2026-10-19",
+          "localizedDescription": "- feat(player): optional libmpv libass renderer for ASS/SSA on ExoPlayer @chrisk325\r\n- fix(player): soften liquid glass on player controls @chrisk325\r\n- fix(android): apply the player orientation togg...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.6.2-beta/nuvio-0.6.2-enhanced-release.ipa",
+          "size": 72991139,
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "0.6.1",
           "date": "2026-10-16",
           "localizedDescription": "# 0.6.1-beta:\r\n- fix(ios): merge duplicate MetalLayer.nextDrawable overrides @luqmanfadlli \r\n- fix(streams): adapt the party shared-stream header to fork pinning @luqmanfadlli\r\n- fix(party): let only ...",
