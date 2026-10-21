@@ -83,6 +83,14 @@
       "bundleIdentifier": "com.nuvio.enhanced.luqmanfadlli",
       "versions": [
         {
+          "version": "0.6.3",
+          "date": "2026-10-21",
+          "localizedDescription": "- feat(subtitle): add custom font and shadow (#227) @luqmanfadlli\r\n- Translate new strings to pt-BR and some minor changes (#223) @mikhaelvm\r\n- fix(player): liquid glass regression from the mpv libass...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.6.3-beta/nuvio-0.6.3-enhanced-release.ipa",
+          "size": 73495899,
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "0.6.2",
           "date": "2026-10-19",
           "localizedDescription": "- feat(player): optional libmpv libass renderer for ASS/SSA on ExoPlayer @chrisk325\r\n- fix(player): soften liquid glass on player controls @chrisk325\r\n- fix(android): apply the player orientation togg...",
