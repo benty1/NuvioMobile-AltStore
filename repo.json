@@ -83,6 +83,14 @@
       "bundleIdentifier": "com.nuvio.enhanced.luqmanfadlli",
       "versions": [
         {
+          "version": "0.6.4",
+          "date": "2026-10-24",
+          "localizedDescription": "- feat backup export and import under advanced settings (#254) @chrisk325\r\n- fix padding for legacy layout player (#253) @chrisk325\r\n- fix(player): let the player controls use the full screen width @l...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.6.4-beta/nuvio-0.6.4-enhanced-release.ipa",
+          "size": 72679701,
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "0.6.3",
           "date": "2026-10-21",
           "localizedDescription": "- feat(subtitle): add custom font and shadow (#227) @luqmanfadlli\r\n- Translate new strings to pt-BR and some minor changes (#223) @mikhaelvm\r\n- fix(player): liquid glass regression from the mpv libass...",
