@@ -83,6 +83,14 @@
       "bundleIdentifier": "com.nuvio.enhanced.luqmanfadlli",
       "versions": [
         {
+          "version": "0.6.5",
+          "date": "2026-10-27",
+          "localizedDescription": "- feat(player): apply the Show Chapters toggle to every engine @luqmanfadlli\r\n- fix(player): resolve double padding on overlay text @luqmanfadlli\r\n- fix(player): show a zoom icon for pinch-to-zoom fee...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.6.5-beta/nuvio-0.6.5-enhanced-release.ipa",
+          "size": 72899544,
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "0.6.4",
           "date": "2026-10-24",
           "localizedDescription": "- feat backup export and import under advanced settings (#254) @chrisk325\r\n- fix padding for legacy layout player (#253) @chrisk325\r\n- fix(player): let the player controls use the full screen width @l...",
