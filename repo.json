@@ -83,6 +83,14 @@
       "bundleIdentifier": "com.nuvio.enhanced.luqmanfadlli",
       "versions": [
         {
+          "version": "0.6.7",
+          "date": "2026-11-04",
+          "localizedDescription": "- fix(ios): use the Compose sheet while Glass UI is on @luqmanfadlli\r\n- fix(ios): align profile insight frosted hero @luqmanfadlli\r\n- fix(ios): open the photo picker after the native sheet closes @luq...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.6.7-beta/nuvio-0.6.7-enhanced-release.ipa",
+          "size": 73889101,
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "0.6.6",
           "date": "2026-10-30",
           "localizedDescription": "- fix(merge): fix build errors after upstream merge @luqmanfadlli\r\n- fix(settings): change subtitle size in 1 sp steps @luqmanfadlli\r\n- build(ios): use the Nuvio Enhanced MPVKit fork to support night ...",
