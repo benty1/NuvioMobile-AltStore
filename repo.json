@@ -83,6 +83,14 @@
       "bundleIdentifier": "com.nuvio.enhanced.luqmanfadlli",
       "versions": [
         {
+          "version": "0.6.8",
+          "date": "2026-11-05",
+          "localizedDescription": "- fix(ios): stop the skip ahead after Control Centre / Notification Centre (#311) @luqmanfadlli\r\n- feat(livetv): Live TV revamp with Channels, Guide, Sports and On Demand tabs, recents/favorites/categ...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.6.8-beta/nuvio-0.6.8-enhanced-release.ipa",
+          "size": 74191271,
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "0.6.7",
           "date": "2026-11-04",
           "localizedDescription": "- fix(ios): use the Compose sheet while Glass UI is on @luqmanfadlli\r\n- fix(ios): align profile insight frosted hero @luqmanfadlli\r\n- fix(ios): open the photo picker after the native sheet closes @luq...",
