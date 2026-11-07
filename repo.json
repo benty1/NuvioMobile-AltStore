@@ -83,6 +83,14 @@
       "bundleIdentifier": "com.nuvio.enhanced.luqmanfadlli",
       "versions": [
         {
+          "version": "0.6.9",
+          "date": "2026-11-06",
+          "localizedDescription": "- fix(details): restore glass floating header in cinematic mode after upstream merge @luqmanfadlli\r\n- fix(ratings): restore enhanced in-app ratings on upstream merge @luqmanfadlli\r\n- fix(ios): keep th...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.6.9-beta/nuvio-0.6.9-enhanced-release.ipa",
+          "size": 74916328,
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "0.6.8",
           "date": "2026-11-05",
           "localizedDescription": "- fix(ios): stop the skip ahead after Control Centre / Notification Centre (#311) @luqmanfadlli\r\n- feat(livetv): Live TV revamp with Channels, Guide, Sports and On Demand tabs, recents/favorites/categ...",
