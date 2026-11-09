@@ -83,6 +83,14 @@
       "bundleIdentifier": "com.nuvio.enhanced.luqmanfadlli",
       "versions": [
         {
+          "version": "0.6.10",
+          "date": "2026-11-09",
+          "localizedDescription": "- perf(ios): memory optimization long sessions and 4K HDR/DV playback @luqmanfadlli\r\n- feat(player): add Anime4K 2x upscaler and line sharpener for ExoPlayer and mpv (#337) @chrisk325\r\n- fix(ios): det...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.6.10-beta/nuvio-0.6.10-enhanced-release.ipa",
+          "size": 75374093,
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "0.6.9",
           "date": "2026-11-06",
           "localizedDescription": "- fix(details): restore glass floating header in cinematic mode after upstream merge @luqmanfadlli\r\n- fix(ratings): restore enhanced in-app ratings on upstream merge @luqmanfadlli\r\n- fix(ios): keep th...",
