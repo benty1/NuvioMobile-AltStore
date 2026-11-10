@@ -83,6 +83,14 @@
       "bundleIdentifier": "com.nuvio.enhanced.luqmanfadlli",
       "versions": [
         {
+          "version": "0.6.11",
+          "date": "2026-11-10",
+          "localizedDescription": "- feature/subtitle shadow outline blur (#356) @3l-franco\r\n- perf(ios): free more app memory before playback on iPhones @luqmanfadlli\r\n- perf(ios): lighter mpv setup under the iPhone jetsam limit @luqm...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.6.11-beta/nuvio-0.6.11-enhanced-release.ipa",
+          "size": 75396411,
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "0.6.10",
           "date": "2026-11-09",
           "localizedDescription": "- perf(ios): memory optimization long sessions and 4K HDR/DV playback @luqmanfadlli\r\n- feat(player): add Anime4K 2x upscaler and line sharpener for ExoPlayer and mpv (#337) @chrisk325\r\n- fix(ios): det...",
