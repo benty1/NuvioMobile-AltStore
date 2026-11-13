@@ -83,6 +83,14 @@
       "bundleIdentifier": "com.nuvio.enhanced.luqmanfadlli",
       "versions": [
         {
+          "version": "0.6.12",
+          "date": "2026-11-13",
+          "localizedDescription": "- fix(subtitles): config export/import and profile removal for device subtitle prefs @luqmanfadlli\r\n- feat(player): restore HLS quality chooser for Live TV @luqmanfadlli\r\n- Significantly increase anim...",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.6.12-beta/nuvio-0.6.12-enhanced-release.ipa",
+          "size": 75542331,
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "0.6.11",
           "date": "2026-11-10",
           "localizedDescription": "- feature/subtitle shadow outline blur (#356) @3l-franco\r\n- perf(ios): free more app memory before playback on iPhones @luqmanfadlli\r\n- perf(ios): lighter mpv setup under the iPhone jetsam limit @luqm...",
